@@ -1,0 +1,114 @@
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Montserrat', sans-serif;
+background:url('bg.jpg') center/cover fixed;
+color:white;
+}
+
+.overlay{
+background:rgba(0,0,0,0.75);
+min-height:100vh;
+}
+
+/* HEADER */
+
+.header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:15px;
+backdrop-filter: blur(15px);
+background:rgba(0,0,0,0.5);
+z-index:1000;
+}
+
+.logo{
+height:42px;
+}
+
+.back{
+position:absolute;
+left:15px;
+font-size:14px;
+text-decoration:none;
+color:white;
+background:rgba(255,255,255,0.1);
+padding:8px 14px;
+border-radius:20px;
+}
+
+/* PDF VIEW */
+
+.viewer{
+margin-top:80px;
+padding-bottom:90px;
+}
+
+iframe{
+width:100%;
+height:calc(100vh - 170px);
+border:none;
+border-radius:20px;
+}
+
+/* BOTTOM BAR */
+
+.bottom-bar{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+justify-content:space-around;
+padding:12px;
+background:rgba(0,0,0,0.6);
+backdrop-filter: blur(15px);
+}
+
+.bottom-btn{
+color:white;
+text-decoration:none;
+font-size:13px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="header">
+<a class="back" href="index.html">← Назад</a>
+<img src="logo.png" class="logo">
+</div>
+
+<div class="viewer">
+<iframe src="menu-ru.pdf"></iframe>
+</div>
+
+<div class="bottom-bar">
+
+<a class="bottom-btn" href="tel:+374000000">📞 Call</a>
+<a class="bottom-btn" href="https://instagram.com/" target="_blank">📷 Instagram</a>
+<a class="bottom-btn" href="index.html">🌍 Language</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -5,42 +6,55 @@
 <title>Menu RU</title>
 <style>
 body{
-    margin:0;
-    font-family: 'Montserrat', sans-serif;
-    background:#111;
+  margin:0;
+  font-family:'Montserrat', sans-serif;
+  background: url('bg.jpg') center/cover no-repeat;
+  color:white;
 }
 .header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(0,0,0,0.5);
-    backdrop-filter:blur(12px);
-    padding:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:1000;
+  position:fixed;
+  top:0;
+  width:100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
 }
 .logo{
-    height:40px;
+  height:40px;
 }
 .back{
-    position:absolute;
-    left:12px;
-    color:white;
-    text-decoration:none;
-    background:rgba(255,255,255,0.1);
-    padding:6px 12px;
-    border-radius:20px;
+  position:absolute;
+  left:15px;
+  text-decoration:none;
+  color:white;
+  background: rgba(255,255,255,0.1);
+  padding:6px 12px;
+  border-radius:20px;
 }
-.pdf-container{
-    margin-top:70px;
-    height:calc(100vh - 70px);
+.menu{
+  margin-top:80px;
+  padding:20px;
 }
-.pdf-container iframe{
-    width:100%;
-    height:100%;
-    border:none;
+.category{
+  font-size:18px;
+  font-weight:600;
+  margin-top:20px;
+  margin-bottom:10px;
+  border-bottom:1px solid rgba(255,255,255,0.3);
+  padding-bottom:5px;
+}
+.item{
+  display:flex;
+  justify-content:space-between;
+  margin:8px 0;
+  font-size:16px;
+}
+.price{
+  font-weight:600;
 }
 </style>
 </head>
@@ -51,8 +65,20 @@ body{
 <img src="logo.png" class="logo">
 </div>
 
-<div class="pdf-container">
-<iframe src="pdfjs/web/viewer.html?file=menu-ru.pdf"></iframe>
+<div class="menu">
+
+<div class="category">🍔 Бургеры</div>
+<div class="item"><span>Чизбургер</span><span class="price">1200 AMD</span></div>
+<div class="item"><span>Бекон бургер</span><span class="price">1500 AMD</span></div>
+
+<div class="category">🥗 Салаты</div>
+<div class="item"><span>Греческий салат</span><span class="price">900 AMD</span></div>
+<div class="item"><span>Цезарь</span><span class="price">1100 AMD</span></div>
+
+<div class="category">🥤 Напитки</div>
+<div class="item"><span>Кола 0.5л</span><span class="price">500 AMD</span></div>
+<div class="item"><span>Минеральная вода</span><span class="price">400 AMD</span></div>
+
 </div>
 
 </body>

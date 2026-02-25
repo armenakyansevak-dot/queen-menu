@@ -3,62 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu RU</title>
+<title>SUSHI HOME</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
 body{
   margin:0;
   font-family:'Montserrat', sans-serif;
-  background: url('bg.jpg') center/cover no-repeat;
+  background: url('bg.jpg') center/cover no-repeat fixed;
   color:white;
 }
+
+.overlay{
+  background: rgba(0,0,0,0.75);
+  min-height:100vh;
+}
+
+/* HEADER */
 .header{
   position:fixed;
   top:0;
   width:100%;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(12px);
-  padding:15px;
   display:flex;
   align-items:center;
   justify-content:center;
+  padding:15px;
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.5);
   z-index:1000;
 }
+
 .logo{
-  height:40px;
+  height:45px;
 }
+
 .back{
   position:absolute;
   left:15px;
   text-decoration:none;
   color:white;
-  background: rgba(255,255,255,0.1);
-  padding:6px 12px;
+  background:rgba(255,255,255,0.1);
+  padding:6px 14px;
   border-radius:20px;
-}
-.menu{
-  margin-top:80px;
-  padding:20px;
-}
-.category{
-  font-size:18px;
   font-weight:600;
-  margin-top:20px;
+}
+
+/* MENU */
+.menu{
+  margin-top:90px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+/* CATEGORY TITLE */
+.category{
+  font-size:20px;
+  font-weight:600;
   margin-bottom:10px;
   border-bottom:1px solid rgba(255,255,255,0.3);
   padding-bottom:5px;
 }
+
+/* DISH ITEM */
 .item{
   display:flex;
+  flex-wrap:wrap;
+  align-items:center;
   justify-content:space-between;
-  margin:8px 0;
-  font-size:16px;
+  background: rgba(255,255,255,0.05);
+  padding:10px 12px;
+  border-radius:12px;
+  transition: all 0.2s ease;
 }
-.price{
+
+.item:hover{
+  background: rgba(255,255,255,0.15);
+}
+
+.item img{
+  width:80px;
+  height:80px;
+  object-fit: cover;
+  border-radius:12px;
+  margin-right:12px;
+}
+
+.item-info{
+  flex:1;
+}
+
+.item-title{
+  font-size:16px;
   font-weight:600;
+  margin-bottom:5px;
+}
+
+.item-desc{
+  font-size:14px;
+  color:#ddd;
+}
+
+.item-price{
+  font-weight:700;
+  font-size:16px;
+  min-width:60px;
+  text-align:right;
+}
+
+/* RESPONSIVE */
+@media (max-width:600px){
+  .item{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .item img{
+    margin-bottom:10px;
+  }
+  .item-price{
+    text-align:left;
+  }
 }
 </style>
 </head>
 <body>
+
+<div class="overlay">
 
 <div class="header">
 <a class="back" href="index.html">← Назад</a>
@@ -67,19 +138,66 @@ body{
 
 <div class="menu">
 
-<div class="category">🍔 Бургеры</div>
-<div class="item"><span>Чизбургер</span><span class="price">1200 AMD</span></div>
-<div class="item"><span>Бекон бургер</span><span class="price">1500 AMD</span></div>
+<div class="category">🍣 Суши</div>
+<div class="item">
+  <img src="sushi1.jpg" alt="Суши с лососем">
+  <div class="item-info">
+    <div class="item-title">Суши с лососем</div>
+    <div class="item-desc">Свежий лосось на рисе с васаби</div>
+  </div>
+  <div class="item-price">1200 AMD</div>
+</div>
+
+<div class="item">
+  <img src="sushi2.jpg" alt="Суши с тунцом">
+  <div class="item-info">
+    <div class="item-title">Суши с тунцом</div>
+    <div class="item-desc">Тунец, свежий имбирь, соевый соус</div>
+  </div>
+  <div class="item-price">1300 AMD</div>
+</div>
+
+<div class="category">🍱 Роллы</div>
+<div class="item">
+  <img src="roll1.jpg" alt="Калифорния">
+  <div class="item-info">
+    <div class="item-title">Ролл Калифорния</div>
+    <div class="item-desc">Краб, авокадо, огурец, майонез</div>
+  </div>
+  <div class="item-price">1500 AMD</div>
+</div>
+
+<div class="item">
+  <img src="roll2.jpg" alt="Филадельфия">
+  <div class="item-info">
+    <div class="item-title">Ролл Филадельфия</div>
+    <div class="item-desc">Лосось, сливочный сыр, огурец</div>
+  </div>
+  <div class="item-price">1600 AMD</div>
+</div>
 
 <div class="category">🥗 Салаты</div>
-<div class="item"><span>Греческий салат</span><span class="price">900 AMD</span></div>
-<div class="item"><span>Цезарь</span><span class="price">1100 AMD</span></div>
+<div class="item">
+  <img src="salad1.jpg" alt="Салат с морепродуктами">
+  <div class="item-info">
+    <div class="item-title">Салат с морепродуктами</div>
+    <div class="item-desc">Креветки, кальмары, овощи</div>
+  </div>
+  <div class="item-price">900 AMD</div>
+</div>
 
 <div class="category">🥤 Напитки</div>
-<div class="item"><span>Кола 0.5л</span><span class="price">500 AMD</span></div>
-<div class="item"><span>Минеральная вода</span><span class="price">400 AMD</span></div>
-
+<div class="item">
+  <img src="drink1.jpg" alt="Зеленый чай">
+  <div class="item-info">
+    <div class="item-title">Зеленый чай</div>
+    <div class="item-desc">Свежий японский чай</div>
+  </div>
+  <div class="item-price">500 AMD</div>
 </div>
+
+</div> <!-- /menu -->
+</div> <!-- /overlay -->
 
 </body>
 </html>
